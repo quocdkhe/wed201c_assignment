@@ -1,0 +1,82 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+figcaption{
+    text-align: center;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    border: 1px solid blue;
+    border-radius: 35px;
+    width: 100%;
+  }
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+@media screen and (min-width: 772px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+        gap: 10px; /* Optional gap between grid items */
+    }
+
+    figure {
+        margin: 0; /* Remove default margin */
+        width: 100%; /* Ensure the figure takes full width of its container */
+        text-align: center; /* Center-align content */
+    }
+
+    img {
+        display: block; /* Ensure the image is displayed as a block element */
+        max-width: 100%; /* Ensure the image does not exceed the figure's circular shape */
+        height: auto; /* Maintain the aspect ratio of the image */
+        border-radius: 50%; /* Make the image circular */
+        overflow: hidden; /* Ensure the image conforms to the circular shape */
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    figure {
+        border-radius: 0; /* Remove border-radius for figures on larger screens */
+    }
+    img{
+        border-radius: 0%;
+    }
+
+}
